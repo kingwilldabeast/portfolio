@@ -27,8 +27,25 @@ html, body, #root {
   linear-gradient(150deg,#08163e 24%,#202286 0,#202286 26%,#0000 0,#0000 74%,#202286 0,#202286 76%,#08163e 0)0 0,
   linear-gradient(30deg,#08163e 24%,#202286 0,#202286 26%,#0000 0,#0000 74%,#202286 0,#202286 76%,#08163e 0)0 0,
   linear-gradient(90deg,#202286 2%,#08163e 0,#08163e 98%,#202286 0%)0 0 #08163e;
-background-size: 64px 96px;
-background-color: #08163e;
+  background-size: 64px 96px;
+  background-color: #08163e;
+
+  /* width: 100%;
+  height: 100vh; */
+  /* background-image: url('your-image.jpg'); */
+  /* background-repeat: repeat-x;  */
+  /* background-size: cover; */
+  /* animation: slide-background 70s linear infinite;  */
+
+}
+
+@keyframes slide-background {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
 }
 
 #root {
@@ -95,6 +112,11 @@ background-color: #08163e;
 
 .about-content {
   text-align: center;
+}
+
+.headshot {
+  width: 200px;
+  border-radius: 50%;
 }
 
 .projects-container {
@@ -246,4 +268,39 @@ background-color: #08163e;
 
 .close-button:hover {
   background-color: red; /* Change color on hover */
+}
+
+@media (max-width: 500px) {
+
+.torso {
+  flex-direction: column;
+  justify-content: space-around;
+  /* gap: 10px; */
+  overflow: scroll;
+  padding-bottom: 10px;
+}
+
+.about-container {
+  width: 80%;
+  margin: 10px 0;
+  /* min-height: none; */
+}
+
+.headshot {
+  width: 100px;
+}
+
+.projects-container {
+  width: 80%;
+  min-height: 400px;
+}
+
+.carousel-item {
+  height: 250px;
+}
+
+.carousel-caption-custom {
+  font-size: small;
+}
+
 }

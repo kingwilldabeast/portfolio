@@ -14,8 +14,8 @@ export default function Torso() {
     return (
         <div className='torso'>
             <div className='about-container'>
-                <img src={headshot} 
-                style={{ width: '200px', borderRadius: '50%' }}
+                <img src={headshot} className='headshot'
+                // style={{ width: '200px', borderRadius: '50%' }}
 
                 />
                 <div className='about-title'>
